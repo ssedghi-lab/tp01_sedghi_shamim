@@ -1,0 +1,30 @@
+@primary-color: #4CAF50; // Variable pour la couleur principale
+
+.btn {
+    background-color: @primary-color;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    &:hover { // Pseudo-classe pour l'état hover
+        background-color: darken(@primary-color, 10%);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// Mixin pour les titres
+.title() {
+    font-size: 24px;
+    color: @primary-color;
+    font-weight: bold;
+}
+
+h1 {
+    .title(); // Utilisation du mixin
+}
